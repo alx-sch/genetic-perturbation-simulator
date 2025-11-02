@@ -1,6 +1,10 @@
 import igraph as ig
 from typing import Dict, List, Tuple
 
+# -----------------
+# --- Functions ---
+# -----------------
+
 def get_total_influence(
 	G: ig.Graph,					# The network graph
 	current_gene: int,				# Current gene vertex index
@@ -44,6 +48,7 @@ def get_total_influence(
 		)
 
 	return total_influence
+
 
 def compute_gene_effect(
 	edge_list: List[Tuple[str, str, float]],
@@ -161,7 +166,7 @@ if __name__ == "__main__":
 	}
 
 	# --- Run Simulation (Short-Term) ---
-	DEPTH = 3 # Using a smaller depth to limit loop effects
+	DEPTH = 2 # Using a smaller depth to limit loop effects
 	print(f"--- Simulation (Short-Term Response, Depth={DEPTH}) ---")
 
 	# Call the new recursive function
