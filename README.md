@@ -22,7 +22,7 @@ The core idea is that the total influence a source gene $S$ exerts on a target g
 
 Each walk's contribution is the **product of edge weights** along that walk:
 
-$$\text{Influence}(S \to T) = \sum_{\text{walks } p \,:\, S \rightsquigarrow T,\; |p| \leq d} \;\prod_{e \,\in\, p} w_e$$
+$$\text{Influence}(S \to T) = \sum_{\text{walks } p : S \rightsquigarrow T, \ |p| \leq d} \prod_{e \in p} w_e$$
 
 where $w_e$ is the signed weight of edge $e$, and $|p|$ is the number of edges in walk $p$.
 
